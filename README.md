@@ -5,4 +5,4 @@ Lodestar is an Android (API 23+) app intended to be used in emergencies to provi
 
 ---
 
-![alt text](https://raw.githubusercontent.com/ow-ro/Lodestar/master/resources/lodestar_screens.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/ow-ro/Lodestar/master/resources/lodestar_screens2.png "Logo Title Text 1")
