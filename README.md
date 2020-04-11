@@ -1,2 +1,2 @@
 # Lodestar
-Android: Emergency user location information
+Android: Real-time user location information for emergencies
