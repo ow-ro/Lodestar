@@ -31,6 +31,8 @@ import android.widget.Toast;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -42,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView mBackground;
     TextView mTitle, mTimestamp, mLatitude, mLongitude, mAccuracy, mAltitude, mAddress;
-    FloatingActionButton mInfo, mRefresh;
-    Button mGMaps;
+    FloatingActionButton mInfo, mRefresh, mGMaps;
     private GoogleMap mMap;
     LocationManager locationManager;
     LocationListener locationListener;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_modified);
 
         mBackground = findViewById(R.id.background);
         mTitle = findViewById(R.id.title);
@@ -195,8 +196,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateLocationDetails(Location location) {
-        mLatitude.setText("Latitude: " + String.valueOf(location.getLatitude()));
-        mLongitude.setText("Longitude: " + String.valueOf(location.getLongitude()));
+        DecimalFormat df = new DecimalFormat("#.#####");
+        df.setRoundingMode(RoundingMode.CEILING);
+        mLatitude.setText("Latitude: " + String.valueOf(df.format(location.getLatitude())));
+        mLongitude.setText("Longitude: " + String.valueOf(df.format(location.getLongitude())));
         mAccuracy.setText("Accuracy: Within " + String.valueOf(location.getAccuracy()) + " metres");
         mAltitude.setText("Altitude: " + String.valueOf(location.getAltitude()) + " metres");
 
