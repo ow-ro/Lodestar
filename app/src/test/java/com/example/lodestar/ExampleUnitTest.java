@@ -1,4 +1,4 @@
-package com.example.lodestar;
+package com.owro.lodestar;
 
 import org.junit.Test;
 

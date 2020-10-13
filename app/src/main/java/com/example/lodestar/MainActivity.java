@@ -1,4 +1,4 @@
-package com.example.lodestar;
+package com.owro.lodestar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
