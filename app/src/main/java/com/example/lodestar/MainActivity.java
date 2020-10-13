@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     String lastLat;
     String lastLon;
 
+    //test comment
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
