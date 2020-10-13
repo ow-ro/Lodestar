@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     String lastLon;
 
     //test comment
+    //test 2
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
